@@ -12,7 +12,7 @@ seconds=30;
 
 # Finds out window id
 function getWindowID {
-   windowid=$(xwininfo -display :0 -root -children | grep plugin-container | head -n1 | awk '{print $1}');
+   windowid=$(xwininfo -display $DISPLAY -root -children | grep plugin-container | head -n1 | awk '{print $1}');
    echo $windowid;
 }
 
