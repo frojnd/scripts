@@ -42,10 +42,8 @@ function main {
 
     while [ 1 -eq 1 ]; do
         sleep $seconds;
-        echo "after sleep";
 
         if [ "$(getFullscreen)" = "Fullscreen" ]; then
-            echo "after first if";
             if [ $activated -eq 0 ]; then 
                 disableScreenSaver;
                 activated=1;
